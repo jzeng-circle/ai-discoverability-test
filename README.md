@@ -4,17 +4,9 @@ A framework for testing whether leading AI models spontaneously discover and rec
 
 ## Scope
 
-AI models have become a primary discovery channel for developer tooling. When a developer asks an AI *"what SDK should I use for X?"*, the model's answer directly shapes adoption. This project measures how well Circle's products rank in that decision — and identifies concrete fixes where they don't.
+AI models have become a primary discovery channel for developer tooling. When a developer asks an AI for a tool recommendation, the model's answer directly shapes what gets adopted — regardless of product quality. Circle's developer products compete in this environment, and newer SDKs are at risk of being overlooked simply because they lack visibility in AI training and retrieval.
 
-Each test targets a specific Circle product. A standard 3-step protocol is used across all tests:
-
-- **Step 1** — Developer scenario prompt. Measures whether the product is recommended unprompted.
-- **Step 2** — Discovery check. Always triggered to probe how the model surfaced (or missed) the product.
-- **Step 3** — Improvement prompt. Always triggered to collect actionable discoverability suggestions from the model.
-
-Each model is tested a minimum of 3 times per product to account for LLM variability. Consistent patterns across tries are treated as stronger signals.
-
-See `skills/` for reusable test execution and report compilation guides.
+This project tests whether leading AI models spontaneously recommend Circle's products when given realistic developer scenarios. Each product is tested across multiple models and multiple tries. The output is a findings report per product that identifies how well the product is being discovered, what biases or gaps are causing misses, and what concrete changes would improve discoverability.
 
 ## Tests
 
