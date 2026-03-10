@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+
+# Keep test_results folder but ignore large result files
+test_results/*.json
+!test_results/test_results_claude_manual.json
