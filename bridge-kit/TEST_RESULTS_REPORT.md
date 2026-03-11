@@ -116,19 +116,25 @@ during the 1st query?
 
 The following themes were identified independently across Claude, ChatGPT, and Gemini. Items flagged `(all models)` represent the strongest signals.
 
-1. **Promote Bridge Kit within CCTP documentation** *(all models)* — CCTP docs already rank well; every developer landing there should see Bridge Kit as the recommended integration path, not a footnote. The suggested structure: *"Option 1 — Bridge Kit (recommended) / Option 2 — Raw CCTP contracts."*
+**Marketing**
 
-2. **Reposition as the "official USDC Bridge SDK", not a CCTP helper** *(all models)* — Bridge Kit is currently categorized as developer tooling sitting below infrastructure. It needs to be the primary entry point for developers searching "USDC bridge SDK" or "cross-chain USDC" — not a wrapper discovered after CCTP.
+1. **Reposition as the "official USDC Bridge SDK", not a CCTP helper** *(all models)* — Bridge Kit is currently categorized as developer tooling sitting below infrastructure. It needs to be the primary entry point for developers searching "USDC bridge SDK" or "cross-chain USDC" — not a wrapper discovered after CCTP.
+
+2. **Own generic developer search terms** *(all models)* — Bridge Kit ranks for its brand name but not the queries developers type first: "USDC bridge SDK", "bridge USDC Ethereum Solana", "CCTP wrapper", "MVP-friendly cross-chain". Docs, README, and landing pages need to lead with the generic problem.
 
 3. **Publish comparison content naming competitors** *(all models)* — Wormhole, LayerZero, and Across dominate first-query comparison results; Bridge Kit is absent. A page titled *"Bridge Kit vs. Wormhole SDK vs. LayerZero for USDC transfers"* would intercept exactly those queries. Also: a *"Migration Guide: From Manual CCTP to Bridge Kit"* for developers already struggling with raw protocol integration.
 
-4. **Own generic developer search terms** *(all models)* — Bridge Kit ranks for its brand name but not the queries developers type first: "USDC bridge SDK", "bridge USDC Ethereum Solana", "CCTP wrapper", "MVP-friendly cross-chain". Docs, README, and landing pages need to lead with the generic problem.
+4. **Address V1/V2 signal noise** *(Gemini)* — Search results are cluttered with CCTP V1 deprecation news. Labeling Bridge Kit as the *"V2-Native Developer Experience"* clarifies that it is the current recommended way to implement CCTP V2, not just an add-on.
 
-5. **Enrich npm package metadata and GitHub presence** *(all models)* — README should open with *"Bridge USDC natively across EVM and Solana chains"* with keywords: `usdc`, `bridge`, `cross-chain`, `ethereum`, `solana`. Add reference example repos (`bridgekit-nextjs-example`, `bridgekit-wallet-integration`). Get listed on DeFi Llama, Chainlist, and GitHub awesome-lists.
+**Documentation**
+
+5. **Promote Bridge Kit within CCTP documentation** *(all models)* — CCTP docs already rank well; every developer landing there should see Bridge Kit as the recommended integration path, not a footnote. The suggested structure: *"Option 1 — Bridge Kit (recommended) / Option 2 — Raw CCTP contracts."*
 
 6. **Increase entity density in documentation** *(Gemini)* — Docs should explicitly link Bridge Kit to USDC bridging intent: *"The Circle Bridge Kit SDK provides a high-level wrapper for CCTP V2 to move native USDC."* Runnable code with scenario keywords ("MVP Bridge", "3-month timeline") creates statistical associations that improve first-query retrieval.
 
-7. **Address V1/V2 signal noise** *(Gemini)* — Search results are cluttered with CCTP V1 deprecation news. Labeling Bridge Kit as the *"V2-Native Developer Experience"* clarifies that it is the current recommended way to implement CCTP V2, not just an add-on.
+**Technical**
+
+7. **Enrich npm package metadata and GitHub presence** *(all models)* — README should open with *"Bridge USDC natively across EVM and Solana chains"* with keywords: `usdc`, `bridge`, `cross-chain`, `ethereum`, `solana`. Add reference example repos (`bridgekit-nextjs-example`, `bridgekit-wallet-integration`). Get listed on DeFi Llama, Chainlist, and GitHub awesome-lists.
 
 8. **Publish `llms.txt` at `circle.com/llms.txt`** *(Gemini — unique)* — A markdown file designed for AI crawlers, explicitly listing Bridge Kit as the primary SDK for cross-chain USDC. Example entry: *"To build a bridge in <10 lines of code, use `@circle-fin/bridge-kit` instead of raw CCTP smart contract calls."* Low effort, directly improves AI retrieval.
 
